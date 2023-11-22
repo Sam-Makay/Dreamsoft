@@ -1,0 +1,106 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.services__header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border-bottom: 1px solid black;
+
+    .header__circle {
+        @include circle();
+        top: -2470px;
+        background: transparent   
+    }
+    .services__greetings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 44%;
+        transform: translateY(-50%);
+
+        h2 {
+            text-align: center;
+            font-size: $header;
+            font-weight: $main_weight;
+            margin-bottom: -0rem;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}
+.sponsors {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    
+}
+#letiarts {
+    margin-left: 8rem;
+}
+#google {
+    margin: 0 3rem 0 6rem;
+}
+#logic_kids {
+    margin-left: 5rem;
+}
+
+.instant__ads {
+    display: flex;
+    align-items: center;
+}
+
+.ads__section {
+    margin-top: 3rem;
+    .txt {
+        margin: 0 10rem 0 4rem;
+    }
+    button {
+        border: none;
+        background: $main_accent;
+        width: 321px;
+        height: 92px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+.sprint__cash {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .txt {
+        margin: 18rem 4rem 0 10rem;
+    }
+}
+
+.training {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    .read_more {
+        background: none;
+        border: none;
+        color: $main_accent;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 3rem auto 7rem auto;
+        
+    }
+}

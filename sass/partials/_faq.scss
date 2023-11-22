@@ -1,0 +1,104 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@mixin bubble($size,$left,$top) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    opacity: 0.1;
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: $main_accent;
+}
+
+.faq__header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .bubble1 {
+        @include bubble(200px,7%,59%)    
+    }
+    .bubble2 {
+        @include bubble(130px,17%,73%)
+    }
+    .bubble3 {
+        @include bubble(67px,4% ,56% )
+    }
+    .bubble4 {
+        @include bubble(14px,3% ,69% )
+    }
+    .bubble5 {
+        @include bubble(14px,9.1% ,52% )
+    }
+    .bubble6 {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        opacity: 0.1;
+        position: absolute;
+        top: 30%;
+        right: -70px;
+        background: $main_accent;
+    }
+}
+
+
+.faq__wrapper {
+    margin: 0 3rem;
+    border-left: 44.9px solid rgba(163, 155, 155,0.1);
+    padding-inline: 2rem;
+
+    h3 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: -0rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.qbox {
+    border-radius: 5px;
+    display: flex;
+    min-height: 4rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.527);
+    margin: 3rem auto;
+
+    .text__box {
+        width: 70%;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 3rem;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: -0.0rem
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        input {
+            border: none;
+            background: none;
+            color: $main_accent;
+            width: fit-content;
+            padding: 0;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    .action__box {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+}
